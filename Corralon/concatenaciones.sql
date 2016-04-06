@@ -37,3 +37,20 @@ FROM producto p
 GROUP BY p.nombre
 ORDER BY p.nombre;
 
+
+
+
+SELECT c.numero_documento, c.nombre, COALESCE ( SUM (v.cantidad * p.precio), 0)
+FROM
+	cliente c
+	LEFT JOIN venta v
+	ON c.numero_documento = v.cliente
+	LEFT JOIN producto p
+	ON p.tipo = v.tipo_producto AND
+	   p.codigo = v.codigo_producto
+GROUP BY c.numero_documento, c.nombre
+ORDER BY nombre
+; 
+
+
+
