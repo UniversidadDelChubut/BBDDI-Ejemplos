@@ -18,12 +18,6 @@ SET client_min_messages = warning;
 -- Name: municipalidad; Type: DATABASE; Schema: -; Owner: postgres
 --
 
-CREATE DATABASE municipalidad WITH TEMPLATE = template0 ENCODING = 'UTF8' LC_COLLATE = 'Spanish_Spain.1252' LC_CTYPE = 'Spanish_Spain.1252';
-
-
-ALTER DATABASE municipalidad OWNER TO postgres;
-
-\connect municipalidad
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
